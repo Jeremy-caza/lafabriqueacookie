@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Cookie Bliss – Mentions légales</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --color-primary:#C88A5B;
+      --color-primary-dark:#a36c41;
+      --color-secondary:#F5E9DA;
+      --color-bg:#FFFFFF;
+      --color-text:#333333;
+      --color-muted:#777777;
+      --shadow-soft:0 10px 30px rgba(0,0,0,0.08);
+      --radius-lg:24px;
+      --radius-md:16px;
+      --radius-pill:999px;
+      --max-width:900px;
+      --header-height:72px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Poppins',system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--color-bg);
+      color:var(--color-text);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{text-decoration:none;color:inherit}
+    button{font-family:inherit;border:none;background:none;cursor:pointer}
+    .container{width:100%;max-width:var(--max-width);margin:0 auto;padding:0 1.5rem}
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(255,255,255,0.9);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(0,0,0,0.04);
+    }
+    .header-inner{
+      height:var(--header-height);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1.5rem;
+    }
+    .logo{
+      font-family:'Playfair Display',serif;
+      font-size:1.4rem;
+      font-weight:600;
+      letter-spacing:0.06em;
+      text-transform:uppercase;
+      padding:0.4rem 0.9rem;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,0.06);
+      background:linear-gradient(135deg, #fff, #fdf5ee);
+    }
+    nav{display:flex;align-items:center;gap:1.5rem}
+    .nav-links{
+      list-style:none;
+      display:flex;
+      align-items:center;
+      gap:1.5rem;
+      font-size:0.95rem;
+    }
+    .nav-links a{
+      position:relative;
+      padding-bottom:0.1rem;
+    }
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;bottom:0;
+      width:0;height:2px;
+      background:var(--color-primary);
+      transition:width 0.25s ease;
+    }
+    .nav-links a:hover::after{width:100%}
+    .nav-cta{
+      padding:0.5rem 1.1rem;
+      border-radius:var(--radius-pill);
+      border:1px solid rgba(0,0,0,0.05);
+      background:var(--color-secondary);
+      font-size:0.9rem;
+    }
+    .burger{
+      display:none;
+      width:32px;height:32px;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,0.08);
+      align-items:center;
+      justify-content:center;
+    }
+    .burger span{
+      position:relative;
+      width:16px;height:2px;
+      background:var(--color-text);
+      display:block;
+    }
+    .burger span::before,
+    .burger span::after{
+      content:"";
+      position:absolute;
+      left:0;
+      width:16px;height:2px;
+      background:var(--color-text);
+      transition:transform 0.25s ease, top 0.25s ease, opacity 0.25s ease;
+    }
+    .burger span::before{top:-5px}
+    .burger span::after{top:5px}
+    .burger.active span{background:transparent}
+    .burger.active span::before{top:0;transform:rotate(45deg)}
+    .burger.active span::after{top:0;transform:rotate(-45deg)}
+
+    main{min-height:calc(100vh - var(--header-height) - 220px);}
+
+    .legal{
+      padding:3.5rem 0;
+    }
+    .legal-header{
+      margin-bottom:2.5rem;
+    }
+    .legal-title{
+      font-family:'Playfair Display',serif;
+      font-size:1.9rem;
+      margin-bottom:0.4rem;
+    }
+    .legal-subtitle{
+      font-size:0.95rem;
+      color:var(--color-muted);
+    }
+    .legal-section{
+      margin-bottom:2rem;
+    }
+    .legal-section h2{
+      font-size:1.1rem;
+      font-weight:600;
+      margin-bottom:0.6rem;
+    }
+    .legal-section p{
+      font-size:0.9rem;
+      color:var(--color-text);
+      margin-bottom:0.6rem;
+    }
+    .legal-section ul{
+      margin-left:1.3rem;
+      font-size:0.9rem;
+      color:var(--color-text);
+    }
+    .legal-section ul li{
+      margin-bottom:0.4rem;
+    }
+    .legal-highlight{
+      background:var(--color-secondary);
+      border-radius:var(--radius-md);
+      padding:1.1rem 1.2rem;
+      font-size:0.88rem;
+      color:var(--color-text);
+    }
+
+    footer{
+      border-top:1px solid rgba(0,0,0,0.06);
+      padding:2.2rem 0 2rem;
+      margin-top:3rem;
+    }
+    .footer-inner{
+      display:flex;
+      flex-direction:column;
+      gap:1.2rem;
+      font-size:0.85rem;
+      color:var(--color-muted);
+    }
+    .footer-top{
+      display:flex;
+      flex-wrap:wrap;
+      gap:1.5rem;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .footer-brand{
+      font-family:'Playfair Display',serif;
+      font-size:1.1rem;
+    }
+    .footer-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:1rem;
+    }
+    .footer-links a{
+      text-decoration:underline;
+      text-decoration-color:rgba(0,0,0,0.2);
+      text-underline-offset:3px;
+    }
+    .footer-bottom{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.6rem;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    @media (max-width:767px){
+      .nav-links{
+        position:fixed;
+        inset:var(--header-height) 0 auto 0;
+        padding:1.2rem 1.5rem 1.6rem;
+        background:rgba(255,255,255,0.98);
+        flex-direction:column;
+        align-items:flex-start;
+        gap:1rem;
+        transform:translateY(-110%);
+        opacity:0;
+        pointer-events:none;
+        transition:transform 0.25s ease, opacity 0.25s ease;
+      }
+      header.nav-open .nav-links{
+        transform:translateY(0);
+        opacity:1;
+        pointer-events:auto;
+      }
+      .nav-cta{display:none}
+      .burger{display:inline-flex}
+      .legal{padding-top:3rem}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Cookie Bliss</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="produits.html">Cookies</a></li>
+        <li><a href="histoire.html">Notre histoire</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-cta" onclick="window.location.href='index.html'">Retour au site</button>
+      <button class="burger" aria-label="Ouvrir le menu">
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="legal">
+    <div class="container">
+      <header class="legal-header">
+        <h1 class="legal-title">Mentions légales</h1>
+        <p class="legal-subtitle">Conformément aux dispositions des articles 6-III et 19 de la loi n°2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique.</p>
+      </header>
+
+      <section class="legal-section">
+        <h2>1. Éditeur du site</h2>
+        <p>Le site <strong>Cookie Bliss</strong> est édité par :</p>
+        <div class="legal-highlight">
+          <p><strong>Raison sociale :</strong> [RAISON_SOCIALE]</p>
+          <p><strong>Forme juridique :</strong> [FORME_JURIDIQUE] (ex : micro-entreprise, EURL…)</p>
+          <p><strong>Adresse :</strong> [ADRESSE_COMPLETE]</p>
+          <p><strong>SIRET :</strong> [SIRET]</p>
+          <p><strong>E-mail de contact :</strong> <a href="mailto:[EMAIL_CONTACT]">[EMAIL_CONTACT]</a></p>
+        </div>
+      </section>
+
+      <section class="legal-section">
+        <h2>2. Responsable de la publication</h2>
+        <p>Le responsable de la publication est :</p>
+        <p><strong>[NOM_PRENOM_RESPONSABLE]</strong>, en qualité de [FONCTION_RESPONSABLE] au sein de [RAISON_SOCIALE].</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>3. Hébergeur du site</h2>
+        <p>Le site est hébergé par :</p>
+        <p><strong>[NOM_HEBERGEUR]</strong><br>
+          [ADRESSE_HEBERGEUR]<br>
+          Site web : [SITE_WEB_HEBERGEUR]
+        </p>
+        <p>À titre d’exemple : GitHub, GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>4. Propriété intellectuelle</h2>
+        <p>L’ensemble des éléments présents sur ce site (textes, photographies, illustrations, logo, identité visuelle, mise en page, structure, etc.) est, sauf mention contraire, la propriété exclusive de [RAISON_SOCIALE].</p>
+        <p>Toute reproduction, représentation, modification, adaptation, redistribution, totale ou partielle, de ces éléments, par quelque procédé que ce soit, sans l’autorisation écrite préalable de [RAISON_SOCIALE], est strictement interdite et serait susceptible de constituer une contrefaçon au sens des articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>5. Données personnelles</h2>
+        <p>Le site Cookie Bliss ne collecte des informations personnelles relatives à l’utilisateur que pour le besoin de certains services proposés (formulaire de contact, prise de commande par e-mail, etc.).</p>
+        <p>Les données collectées sont :</p>
+        <ul>
+          <li>Nom et prénom ;</li>
+          <li>Adresse e-mail ;</li>
+          <li>Éventuellement numéro de téléphone et informations de commande (parfums choisis, quantités, date de retrait…).</li>
+        </ul>
+        <p>Ces données sont utilisées uniquement pour répondre aux demandes, gérer les commandes et assurer le suivi de la relation client. Elles ne sont ni revendues ni communiquées à des tiers sans votre accord, sauf obligation légale.</p>
+        <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi « Informatique et Libertés », vous disposez d’un droit d’accès, de rectification, d’opposition et de suppression des données vous concernant. Pour exercer ces droits, vous pouvez écrire à : <a href="mailto:[EMAIL_CONTACT]">[EMAIL_CONTACT]</a>.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>6. Cookies (traceurs de navigation)</h2>
+        <p>Le terme « cookies » utilisé ici fait référence aux traceurs de navigation déposés sur votre appareil, et non aux biscuits gourmands proposés par Cookie Bliss.</p>
+        <p>Le site peut être amené à déposer des cookies techniques ou de mesure d’audience (par exemple via des outils d’analyse de fréquentation). Ces cookies ont pour objectif :</p>
+        <ul>
+          <li>d’assurer le bon fonctionnement du site ;</li>
+          <li>d’améliorer l’expérience utilisateur ;</li>
+          <li>de mieux comprendre la consultation des différentes pages.</li>
+        </ul>
+        <p>Vous pouvez à tout moment configurer votre navigateur pour accepter ou refuser les cookies, ou pour être informé de la mise en place de cookies. Le refus de certains cookies peut toutefois dégrader l’expérience de navigation.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>7. Limitation de responsabilité</h2>
+        <p>[RAISON_SOCIALE] s’efforce de fournir sur le site des informations aussi précises que possible. Toutefois, elle ne pourra être tenue responsable des omissions, inexactitudes et carences dans la mise à jour, qu’elles soient de son fait ou du fait de tiers partenaires.</p>
+        <p>Les liens hypertextes présents sur le site en direction d’autres ressources présentes sur le réseau Internet ne sauraient engager la responsabilité de [RAISON_SOCIALE].</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>8. Droit applicable</h2>
+        <p>Les présentes mentions légales sont régies par le droit français. En cas de litige, et à défaut de résolution amiable, les tribunaux français seront seuls compétents.</p>
+      </section>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Cookie Bliss</div>
+        <div>Cookies artisanaux, moelleux et généreux, faits maison avec amour.</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://instagram.com/cookiebliss" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="mailto:contact@cookiebliss.fr">Contact</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Cookie Bliss – Tous droits réservés.</span>
+      <span>Site vitrine – fabrication artisanale de cookies.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    const header = document.querySelector('header');
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    if(burger && header && navLinks){
+      burger.addEventListener('click', ()=>{
+        burger.classList.toggle('active');
+        header.classList.toggle('nav-open');
+      });
+      navLinks.querySelectorAll('a').forEach(link=>{
+        link.addEventListener('click', ()=>{
+          burger.classList.remove('active');
+          header.classList.remove('nav-open');
+        });
+      });
+    }
+
+    const yearSpan = document.getElementById('year');
+    if(yearSpan){
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  })();
+</script>
+</body>
+</html>
