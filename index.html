@@ -20,6 +20,8 @@
     header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.04)}
     .header-inner{height:var(--header-height);display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
     .logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0.4rem 0.9rem;border-radius:999px;border:1px solid rgba(0,0,0,0.06);background:linear-gradient(135deg,#fff,#fdf5ee)}
+    .logo-group{display:flex;align-items:center;gap:0.75rem}
+    .logo-img img{height:44px;display:block}
     nav{display:flex;align-items:center;gap:1.5rem}
     .nav-links{list-style:none;display:flex;align-items:center;gap:1.5rem;font-size:0.95rem}
     .nav-links a{position:relative;padding-bottom:0.1rem}
@@ -65,9 +67,7 @@
 
     .best-grid{display:grid;gap:1.8rem}
     .cookie-card{background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-soft);display:flex;flex-direction:column}
-    .cookie-image{position:relative;padding-top:62%;background:linear-gradient(135deg,#fbeade,#f7d3b9)}
-    .cookie-image::before{content:"";position:absolute;inset:0;background:url("https://images.pexels.com/photos/890577/pexels-photo-890577.jpeg?auto=compress&cs=tinysrgb&w=1200") center/cover no-repeat;mix-blend-mode:multiply;opacity:0.9}
-    .cookie-badge{position:absolute;left:1rem;top:1rem;padding:0.35rem 0.8rem;border-radius:var(--radius-pill);background:rgba(255,255,255,0.96);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em}
+    .cookie-image{position:relative;padding-top:62%;background-color:#fbeade;background-size:cover;background-position:center}
     .cookie-content{padding:1.2rem 1.4rem 1.4rem;display:flex;flex-direction:column;gap:0.4rem}
     .cookie-name{font-weight:600;font-size:1rem}
     .cookie-desc{font-size:0.9rem;color:var(--color-muted)}
@@ -89,8 +89,10 @@
     .footer-inner{display:flex;flex-direction:column;gap:1.2rem;font-size:0.85rem;color:var(--color-muted)}
     .footer-top{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:center}
     .footer-brand{font-family:'Playfair Display',serif;font-size:1.1rem}
-    .footer-links{display:flex;flex-wrap:wrap;gap:1rem}
-    .footer-links a{text-decoration:underline;text-decoration-color:rgba(0,0,0,0.2);text-underline-offset:3px}
+    .footer-links{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+    .footer-links a{font-size:0.85rem;text-decoration:underline;text-decoration-color:rgba(0,0,0,0.2);text-underline-offset:3px}
+    .footer-links .social-icon{width:30px;height:30px;border-radius:50%;border:1px solid rgba(0,0,0,0.18);display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+    .footer-links .social-icon svg{width:16px;height:16px;display:block}
     .footer-bottom{display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:space-between;align-items:center}
 
     @media (min-width:768px){
@@ -116,7 +118,14 @@
 <body>
 <header>
   <div class="container header-inner">
-    <a href="index.html" class="logo">La Fabrique à Cookies</a>
+    <div class="logo-group">
+      <a href="index.html" class="logo-img">
+        <img src="images/logo-principal.png" alt="La Fabrique à Cookies - logo principal">
+      </a>
+      <a href="index.html" class="logo-img">
+        <img src="images/logo-secondaire.png" alt="La Fabrique à Cookies - logo secondaire">
+      </a>
+    </div>
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Accueil</a></li>
@@ -140,18 +149,19 @@
           <span>🍪</span>
           <p>Cookies artisanaux, moelleux et généreux</p>
         </div>
-        <h1 class="hero-title">La Fabrique à Cookies, la pause gourmande qui fond dans la bouche.</h1>
+        <h1 class="hero-title">La Fabrique à Cookies, Le cookie plus balèze que mamie.</h1>
         <div class="hero-cta">
           <a href="produits.html" class="btn-primary">Découvrir les cookies</a>
           <a href="#contact" class="btn-secondary">Contact &amp; commandes →</a>
         </div>
-        <p class="hero-note">Idéal pour un petit plaisir perso, un goûter d’équipe ou un cadeau gourmand à offrir.</p>
+        <p class="hero-note">Bienvenue dans mon atelier, qui sera bientôt ton nouveau péché mignon.</p>
       </div>
       <div class="hero-media">
         <div class="hero-slider">
-          <div class="hero-slide is-active" style="background-image:url('https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
-          <div class="hero-slide" style="background-image:url('https://images.pexels.com/photos/890577/pexels-photo-890577.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
-          <div class="hero-slide" style="background-image:url('https://images.pexels.com/photos/1495534/pexels-photo-1495534.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+          <div class="hero-slide is-active" style="background-image:url('images/hero1.jpg');"></div>
+          <div class="hero-slide" style="background-image:url('images/hero2.jpg');"></div>
+          <div class="hero-slide" style="background-image:url('images/hero3.jpg');"></div>
+          <div class="hero-slide" style="background-image:url('images/hero4.jpg');"></div>
         </div>
         <button class="hero-arrow hero-arrow--prev" type="button" aria-label="Image précédente">‹</button>
         <button class="hero-arrow hero-arrow--next" type="button" aria-label="Image suivante">›</button>
@@ -168,34 +178,34 @@
       <div class="section-header">
         <p class="section-kicker">Les incontournables</p>
         <h2 class="section-title" id="best-sellers">Les best-sellers de La Fabrique</h2>
-        <p class="section-subtitle">Une sélection de cookies qui reviennent dans toutes les commandes. Texture fondante, parfums généreux, petites touches de sel ou de pralin… difficile de choisir.</p>
+        <p class="section-subtitle">Une sélection de cookies qui reviennent dans toutes les commandes.</p>
       </div>
       <div class="best-grid">
         <article class="cookie-card">
-          <div class="cookie-image">
+          <div class="cookie-image" style="background-image:url('images/cookie-signature.jpg');">
             <span class="cookie-badge">Best-seller</span>
           </div>
           <div class="cookie-content">
-            <h3 class="cookie-name">Double Chocolat &amp; Fleur de Sel</h3>
-            <p class="cookie-desc">Un cœur ultra fondant au chocolat noir, des pépites de chocolat au lait et une pointe de fleur de sel qui relève tous les arômes.</p>
+            <h3 class="cookie-name">Le Cookie Signature</h3>
+            <p class="cookie-desc">Noisettes croquantes, grosses pépites de chocolats et cœur coulant... Mamie peut aller se recoucher.</p>
           </div>
         </article>
         <article class="cookie-card">
-          <div class="cookie-image">
+          <div class="cookie-image" style="background-image:url('images/cookie-torrid.jpg');">
             <span class="cookie-badge">Gourmand</span>
           </div>
           <div class="cookie-content">
-            <h3 class="cookie-name">Noisette Praliné Crunch</h3>
-            <p class="cookie-desc">Base vanillée moelleuse, éclats de noisettes torréfiées, cœur praliné coulant. Le cookie des fans de noisette.</p>
+            <h3 class="cookie-name">Le Cookie Torrid</h3>
+            <p class="cookie-desc">Cacahuètes grillées, grosses pépites de chocolat et caramel beurre salé. Il rappellera de bons vieux souvenirs à mamie.</p>
           </div>
         </article>
         <article class="cookie-card">
-          <div class="cookie-image">
+          <div class="cookie-image" style="background-image:url('images/cookie-givre.jpg');">
             <span class="cookie-badge">Nouveau</span>
           </div>
           <div class="cookie-content">
-            <h3 class="cookie-name">Pécan &amp; Caramel Beurre Salé</h3>
-            <p class="cookie-desc">Pépites de chocolat blanc, noix de pécan caramélisées et filet de caramel beurre salé pour une bouchée ultra réconfortante.</p>
+            <h3 class="cookie-name">Le Cookie Givré</h3>
+            <p class="cookie-desc">Zestes de citron frais, noisettes croquantes et pep's acidulé... à en faire sauter son dentier.</p>
           </div>
         </article>
       </div>
@@ -205,8 +215,8 @@
   <section class="section" aria-labelledby="why-cookies">
     <div class="container">
       <div class="section-header">
-        <p class="section-kicker">Pourquoi nous choisir</p>
-        <h2 class="section-title" id="why-cookies">Des cookies pensés dans les moindres détails</h2>
+        <p class="section-kicker">Pourquoi La Fabrique</p>
+        <h2 class="section-title" id="why-cookies">Des cookies qui réchauffent le cœur</h2>
         <p class="section-subtitle">Pas de ligne industrielle ici : chaque recette est travaillée, testée, ajustée jusqu’à trouver l’équilibre parfait entre gourmandise, qualité et régularité.</p>
       </div>
       <div class="why-grid">
@@ -231,13 +241,6 @@
             <p class="why-text">Des recettes simples, lisibles, sans liste d’ingrédients à rallonge. Juste ce qu’il faut.</p>
           </div>
         </article>
-        <article class="why-card">
-          <div class="why-icon">🎁</div>
-          <div>
-            <h3 class="why-title">Idéal à partager ou à offrir</h3>
-            <p class="why-text">Boîtes cadeaux, plateaux à partager pour un bureau, un brunch, un EVJF ou un anniversaire.</p>
-          </div>
-        </article>
       </div>
     </div>
   </section>
@@ -247,14 +250,14 @@
       <div class="contact-band">
         <div>
           <h2 class="contact-band-title" id="contact-title">Contact &amp; commandes</h2>
-          <p class="contact-band-text">Les commandes se font simplement par message. Indiquez vos parfums préférés, la quantité, la date souhaitée et nous revenons vers vous avec une confirmation rapide.</p>
+          <p class="contact-band-text">Les commandes se font simplement par message, par téléphone, sur whatsapp ou par email. Indiquez vos parfums préférés, la quantité, la date souhaitée et nous revenons vers vous avec une confirmation rapide.</p>
         </div>
         <div class="contact-band-actions">
-          <a class="btn-wa" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">
+          <a class="btn-wa" href="https://wa.me/33782163179?text=Bonjour%2C%0AJe%20souhaite%20passer%20commande%20de%20cookies%2C%0AMerci%20par%20avance" target="_blank" rel="noreferrer">
             <span>💬</span>
             <span>Écrire sur WhatsApp</span>
           </a>
-          <a class="btn-outline" href="mailto:contact@cookiebliss.fr">Envoyer un mail</a>
+          <a class="btn-outline" href="mailto:lafabrique.reignier@outlook.fr">Envoyer un mail</a>
         </div>
       </div>
     </div>
@@ -266,17 +269,21 @@
     <div class="footer-top">
       <div>
         <div class="footer-brand">La Fabrique à Cookies</div>
-        <div>Cookies artisanaux, moelleux et généreux, faits maison avec amour.</div>
+        <div>Le cookie plus balèze que mamie</div>
       </div>
       <div class="footer-links">
-        <a href="https://instagram.com/cookiebliss" target="_blank" rel="noreferrer">Instagram</a>
-        <a href="mailto:contact@cookiebliss.fr">Contact</a>
+        <a class="social-icon" href="https://www.instagram.com/la_fabrique_cookies/" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7zm5 3.5A4.5 4.5 0 1 1 7.5 13 4.5 4.5 0 0 1 12 8.5zm0 2A2.5 2.5 0 1 0 14.5 13 2.5 2.5 0 0 0 12 10.5zm5.25-4.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/></svg>
+        </a>
+        <a class="social-icon" href="https://www.facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 21v-7h2.5a1 1 0 0 0 1-1l.5-3a1 1 0 0 0-1-1H13V7a1 1 0 0 1 1-1h2a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-2.5A4.5 4.5 0 0 0 9 7v3H7a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h2v7z"/></svg>
+        </a>
+        <a href="mailto:lafabrique.reignier@outlook.fr">Contact</a>
         <a href="mentions-legales.html">Mentions légales</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> La Fabrique à Cookies – Tous droits réservés.</span>
-      <span>Site vitrine – fabrication artisanale de cookies.</span>
     </div>
   </div>
 </footer>
