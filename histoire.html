@@ -2,355 +2,112 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Cookie Bliss – Notre histoire</title>
+  <title>La Fabrique à Cookies – Notre histoire</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Découvrez l’histoire de Cookie Bliss et l’entrepreneuse qui se cache derrière ces cookies artisanaux faits maison.">
+  <meta name="description" content="Découvrez l’histoire de La Fabrique à Cookies et la personne qui se cache derrière ces cookies artisanaux faits maison.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --color-primary:#C88A5B;
-      --color-primary-dark:#a36c41;
-      --color-secondary:#F5E9DA;
-      --color-bg:#FFFFFF;
-      --color-text:#333333;
-      --color-muted:#777777;
-      --shadow-soft:0 10px 30px rgba(0,0,0,0.08);
-      --radius-lg:24px;
-      --radius-md:16px;
-      --radius-pill:999px;
-      --max-width:1120px;
-      --header-height:72px;
-    }
+    :root{--color-primary:#C88A5B;--color-primary-dark:#a36c41;--color-secondary:#F5E9DA;--color-bg:#FFFFFF;--color-text:#333333;--color-muted:#777777;--shadow-soft:0 10px 30px rgba(0,0,0,0.08);--radius-lg:24px;--radius-md:16px;--radius-pill:999px;--max-width:1240px;--header-height:72px}
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{
-      font-family:'Poppins',system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      background:var(--color-bg);
-      color:var(--color-text);
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-    }
+    body{font-family:'Poppins',system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--color-bg);color:var(--color-text);line-height:1.6;-webkit-font-smoothing:antialiased}
     img{max-width:100%;display:block}
     a{text-decoration:none;color:inherit}
     button{font-family:inherit;border:none;background:none;cursor:pointer}
     .container{width:100%;max-width:var(--max-width);margin:0 auto;padding:0 1.5rem}
-    header{
-      position:sticky;top:0;z-index:50;
-      background:rgba(255,255,255,0.9);
-      backdrop-filter:blur(12px);
-      border-bottom:1px solid rgba(0,0,0,0.04);
-    }
-    .header-inner{
-      height:var(--header-height);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1.5rem;
-    }
-    .logo{
-      font-family:'Playfair Display',serif;
-      font-size:1.4rem;
-      font-weight:600;
-      letter-spacing:0.06em;
-      text-transform:uppercase;
-      padding:0.4rem 0.9rem;
-      border-radius:999px;
-      border:1px solid rgba(0,0,0,0.06);
-      background:linear-gradient(135deg, #fff, #fdf5ee);
-    }
+
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.04)}
+    .header-inner{height:var(--header-height);display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+    .logo-group{display:flex;align-items:center;gap:0.75rem}
+    .logo-img img{height:44px;display:block}
     nav{display:flex;align-items:center;gap:1.5rem}
-    .nav-links{
-      list-style:none;
-      display:flex;
-      align-items:center;
-      gap:1.5rem;
-      font-size:0.95rem;
-    }
-    .nav-links a{
-      position:relative;
-      padding-bottom:0.1rem;
-    }
-    .nav-links a::after{
-      content:"";
-      position:absolute;
-      left:0;bottom:0;
-      width:0;height:2px;
-      background:var(--color-primary);
-      transition:width 0.25s ease;
-    }
+    .nav-links{list-style:none;display:flex;align-items:center;gap:1.5rem;font-size:0.95rem}
+    .nav-links a{position:relative;padding-bottom:0.1rem}
+    .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--color-primary);transition:width .25s ease}
     .nav-links a:hover::after{width:100%}
-    .nav-cta{
-      padding:0.5rem 1.1rem;
-      border-radius:var(--radius-pill);
-      border:1px solid rgba(0,0,0,0.05);
-      background:var(--color-secondary);
-      font-size:0.9rem;
-    }
-    .burger{
-      display:none;
-      width:32px;height:32px;
-      border-radius:999px;
-      border:1px solid rgba(0,0,0,0.08);
-      align-items:center;
-      justify-content:center;
-    }
-    .burger span{
-      position:relative;
-      width:16px;height:2px;
-      background:var(--color-text);
-      display:block;
-    }
-    .burger span::before,
-    .burger span::after{
-      content:"";
-      position:absolute;
-      left:0;
-      width:16px;height:2px;
-      background:var(--color-text);
-      transition:transform 0.25s ease, top 0.25s ease, opacity 0.25s ease;
-    }
+    .nav-cta{padding:0.5rem 1.1rem;border-radius:var(--radius-pill);border:1px solid rgba(0,0,0,0.05);background:var(--color-secondary);font-size:0.9rem}
+    .burger{display:none;width:32px;height:32px;border-radius:999px;border:1px solid rgba(0,0,0,0.08);align-items:center;justify-content:center}
+    .burger span{position:relative;width:16px;height:2px;background:var(--color-text);display:block}
+    .burger span::before,.burger span::after{content:"";position:absolute;left:0;width:16px;height:2px;background:var(--color-text);transition:transform .25s ease,top .25s ease,opacity .25s ease}
     .burger span::before{top:-5px}
     .burger span::after{top:5px}
     .burger.active span{background:transparent}
     .burger.active span::before{top:0;transform:rotate(45deg)}
     .burger.active span::after{top:0;transform:rotate(-45deg)}
 
-    main{min-height:calc(100vh - var(--header-height) - 220px);}
+    main{min-height:calc(100vh - var(--header-height) - 220px)}
 
-    .section{
-      padding:3.5rem 0;
-    }
-    .section-header{
-      text-align:left;
-      margin-bottom:2.2rem;
-    }
-    .section-kicker{
-      font-size:0.8rem;
-      letter-spacing:0.14em;
-      text-transform:uppercase;
-      color:var(--color-muted);
-      margin-bottom:0.4rem;
-    }
-    .section-title{
-      font-family:'Playfair Display',serif;
-      font-size:1.8rem;
-      margin-bottom:0.4rem;
-    }
-    .section-subtitle{
-      font-size:0.95rem;
-      color:var(--color-muted);
-      max-width:520px;
-    }
+    .section{padding:3.5rem 0}
+    .section-header{text-align:left;margin-bottom:2.2rem}
+    .section-kicker{font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-muted);margin-bottom:0.4rem}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.9rem;margin-bottom:0.4rem}
+    .section-subtitle{font-size:0.95rem;color:var(--color-muted);max-width:520px}
 
-    .story-grid{
-      display:grid;
-      gap:2rem;
-      align-items:center;
-    }
-    .founder-photo{
-      position:relative;
-      border-radius:var(--radius-lg);
-      overflow:hidden;
-      box-shadow:var(--shadow-soft);
-      min-height:260px;
-      background:linear-gradient(135deg,#fbeade,#f7d3b9);
-    }
-    .founder-photo::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:url("https://images.pexels.com/photos/3769994/pexels-photo-3769994.jpeg?auto=compress&cs=tinysrgb&w=1200") center/cover no-repeat;
-      opacity:0.9;
-    }
-    .founder-label{
-      position:absolute;
-      left:1.4rem;bottom:1.4rem;
-      padding:0.7rem 1.1rem;
-      border-radius:var(--radius-md);
-      background:rgba(255,255,255,0.94);
-      font-size:0.85rem;
-      display:flex;
-      flex-direction:column;
-      gap:0.1rem;
-    }
-    .founder-label strong{
-      font-weight:600;
-    }
-    .story-text p{
-      font-size:0.95rem;
-      margin-bottom:0.9rem;
-      color:var(--color-text);
-    }
+    .story-grid{display:grid;gap:2.2rem;align-items:center}
+    .founder-photo{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-soft);min-height:260px;background:linear-gradient(135deg,#fbeade,#f7d3b9)}
+    .founder-photo::before{content:"";position:absolute;inset:0;background:url("images/fondatrice.jpg") center/cover no-repeat;opacity:0.95}
+    .founder-label{position:absolute;left:1.4rem;bottom:1.4rem;padding:0.7rem 1.1rem;border-radius:var(--radius-md);background:rgba(255,255,255,0.94);font-size:0.85rem;display:flex;flex-direction:column;gap:0.1rem}
+    .founder-label strong{font-weight:600}
+    .story-text p{font-size:0.95rem;margin-bottom:0.9rem;color:var(--color-text)}
 
-    .values-section{
-      margin-top:3rem;
-    }
-    .values-grid{
-      display:grid;
-      gap:1.4rem;
-      margin-top:1.4rem;
-    }
-    .value-card{
-      background:var(--color-secondary);
-      border-radius:var(--radius-md);
-      padding:1.3rem 1.4rem;
-      display:flex;
-      gap:1rem;
-      align-items:flex-start;
-    }
-    .value-icon{
-      width:34px;height:34px;
-      border-radius:999px;
-      background:#fff;
-      display:flex;align-items:center;justify-content:center;
-    }
-    .value-title{
-      font-weight:600;
-      font-size:0.95rem;
-      margin-bottom:0.2rem;
-    }
-    .value-text{
-      font-size:0.9rem;
-      color:var(--color-muted);
-    }
+    .values-section{margin-top:3rem}
+    .values-grid{display:grid;gap:1.4rem;margin-top:1.4rem}
+    .value-card{background:var(--color-secondary);border-radius:var(--radius-md);padding:1.3rem 1.4rem;display:flex;gap:1rem;align-items:flex-start}
+    .value-icon{width:34px;height:34px;border-radius:999px;background:#fff;display:flex;align-items:center;justify-content:center}
+    .value-title{font-weight:600;font-size:0.95rem;margin-bottom:0.2rem}
+    .value-text{font-size:0.9rem;color:var(--color-muted)}
 
-    .contact-block{
-      margin-top:3rem;
-      background:#111;
-      color:#fff;
-      border-radius:var(--radius-lg);
-      padding:2rem 1.7rem;
-      display:grid;
-      gap:1.2rem;
-    }
-    .contact-title{
-      font-family:'Playfair Display',serif;
-      font-size:1.4rem;
-      margin-bottom:0.3rem;
-    }
-    .contact-text{
-      font-size:0.95rem;
-      opacity:0.9;
-    }
-    .contact-meta{
-      font-size:0.9rem;
-      opacity:0.9;
-    }
-    .contact-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:0.8rem;
-    }
-    .btn-primary{
-      padding:0.9rem 1.8rem;
-      border-radius:var(--radius-pill);
-      background:var(--color-primary);
-      color:#fff;
-      font-size:0.95rem;
-      font-weight:500;
-      box-shadow:var(--shadow-soft);
-      transition:transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-    }
-    .btn-primary:hover{
-      transform:translateY(-1px);
-      background:var(--color-primary-dark);
-      box-shadow:0 16px 40px rgba(0,0,0,0.14);
-    }
-    .btn-outline{
-      padding:0.9rem 1.6rem;
-      border-radius:var(--radius-pill);
-      border:1px solid rgba(255,255,255,0.7);
-      font-size:0.9rem;
-      background:transparent;
-      color:#fff;
-    }
+    .contact-band{margin-top:3rem;background:linear-gradient(120deg,#000,#3b2416);color:#fff;border-radius:var(--radius-lg);padding:1.8rem 1.5rem;display:grid;gap:1.2rem;align-items:center;box-shadow:var(--shadow-soft)}
+    .contact-band-title{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:0.3rem}
+    .contact-band-text{font-size:0.9rem;opacity:0.9}
+    .contact-meta{font-size:0.9rem;opacity:0.9}
+    .contact-band-actions{display:flex;flex-wrap:wrap;gap:0.8rem}
+    .btn-wa{display:inline-flex;align-items:center;gap:0.45rem;padding:0.8rem 1.4rem;border-radius:var(--radius-pill);background:#25D366;font-size:0.9rem;font-weight:500;color:#fff}
+    .btn-outline{padding:0.8rem 1.3rem;border-radius:var(--radius-pill);border:1px solid rgba(255,255,255,0.6);font-size:0.9rem;background:transparent;color:#fff}
 
-    footer{
-      border-top:1px solid rgba(0,0,0,0.06);
-      padding:2.2rem 0 2rem;
-      margin-top:3rem;
-    }
-    .footer-inner{
-      display:flex;
-      flex-direction:column;
-      gap:1.2rem;
-      font-size:0.85rem;
-      color:var(--color-muted);
-    }
-    .footer-top{
-      display:flex;
-      flex-wrap:wrap;
-      gap:1.5rem;
-      justify-content:space-between;
-      align-items:center;
-    }
-    .footer-brand{
-      font-family:'Playfair Display',serif;
-      font-size:1.1rem;
-    }
-    .footer-links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:1rem;
-    }
-    .footer-links a{
-      text-decoration:underline;
-      text-decoration-color:rgba(0,0,0,0.2);
-      text-underline-offset:3px;
-    }
-    .footer-bottom{
-      display:flex;
-      flex-wrap:wrap;
-      gap:0.6rem;
-      justify-content:space-between;
-      align-items:center;
-    }
+    footer{border-top:1px solid rgba(0,0,0,0.06);padding:2.2rem 0 2rem;margin-top:3rem}
+    .footer-inner{display:flex;flex-direction:column;gap:1.2rem;font-size:0.85rem;color:var(--color-muted)}
+    .footer-top{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:center}
+    .footer-brand{font-family:'Playfair Display',serif;font-size:1.1rem}
+    .footer-links{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+    .footer-links a{font-size:0.85rem;text-decoration:underline;text-decoration-color:rgba(0,0,0,0.2);text-underline-offset:3px}
+    .footer-links .social-icon{width:30px;height:30px;border-radius:50%;border:1px solid rgba(0,0,0,0.18);display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+    .footer-links .social-icon img{width:16px;height:16px;display:block}
+    .footer-bottom{display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:space-between;align-items:center}
 
     @media (min-width:768px){
-      .story-grid{
-        grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);
-      }
-      .values-grid{
-        grid-template-columns:repeat(3,minmax(0,1fr));
-      }
-      .contact-block{
-        grid-template-columns:1.5fr 1fr;
-        padding:2.1rem 2.1rem;
-      }
-      .contact-title{font-size:1.5rem}
+      .story-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+      .values-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .contact-band{grid-template-columns:1.4fr 1fr;padding:2rem 2.2rem}
+      .contact-band-title{font-size:1.45rem}
     }
 
     @media (max-width:767px){
-      .nav-links{
-        position:fixed;
-        inset:var(--header-height) 0 auto 0;
-        padding:1.2rem 1.5rem 1.6rem;
-        background:rgba(255,255,255,0.98);
-        flex-direction:column;
-        align-items:flex-start;
-        gap:1rem;
-        transform:translateY(-110%);
-        opacity:0;
-        pointer-events:none;
-        transition:transform 0.25s ease, opacity 0.25s ease;
-      }
-      header.nav-open .nav-links{
-        transform:translateY(0);
-        opacity:1;
-        pointer-events:auto;
-      }
+      .nav-links{position:fixed;inset:var(--header-height) 0 auto 0;padding:1.2rem 1.5rem 1.6rem;background:rgba(255,255,255,0.98);flex-direction:column;align-items:flex-start;gap:1rem;transform:translateY(-110%);opacity:0;pointer-events:none;transition:transform .25s ease,opacity .25s ease}
+      header.nav-open .nav-links{transform:translateY(0);opacity:1;pointer-events:auto}
       .nav-cta{display:none}
       .burger{display:inline-flex}
+      .logo-img img{height:38px}
       .section{padding-top:3rem}
+      .contact-band{text-align:center}
+      .contact-band-actions{justify-content:center}
+      .footer-top,.footer-bottom{flex-direction:column;align-items:center;text-align:center}
     }
   </style>
 </head>
 <body>
 <header>
   <div class="container header-inner">
-    <a href="index.html" class="logo">Cookie Bliss</a>
+    <div class="logo-group">
+      <a href="index.html" class="logo-img">
+        <img src="images/logo-principal.png" alt="La Fabrique à Cookies - logo principal">
+      </a>
+      <a href="index.html" class="logo-img">
+        <img src="images/logo-secondaire.png" alt="La Fabrique à Cookies - logo secondaire">
+      </a>
+    </div>
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Accueil</a></li>
@@ -358,7 +115,7 @@
         <li><a href="histoire.html">Notre histoire</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
-      <button class="nav-cta" onclick="window.location.href='produits.html'">Voir la carte</button>
+      <button class="nav-cta" onclick="window.location.href='produits.html'">Voir les cookies</button>
       <button class="burger" aria-label="Ouvrir le menu">
         <span></span>
       </button>
@@ -370,22 +127,21 @@
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <p class="section-kicker">Qui se cache derrière les cookies ?</p>
-        <h1 class="section-title">L’histoire de Cookie Bliss</h1>
-        <p class="section-subtitle">Derrière chaque fournée, il y a une personne, un parcours et une envie : proposer des cookies aussi bons que ceux qu’on rêve de trouver en vitrine d’un coffee shop.</p>
-      </div>
+        <p class="section-kicker">Qui se cache derrière les cookies&nbsp;?</p>
+        <h1 class="section-title">L’histoire de La Fabrique à Cookies</h1>
+        </div>
 
       <div class="story-grid">
+        <div class="story-text">
+          <p>La Fabrique à Cookies est née d'une envie simple : faire des cookies qui ne laissent personne indifférent. Des recettes généreuses, des cœurs bien coulants, des associations audacieuses et une fabrication 100 % maison. Ici, on assume la gourmandise, on soigne chaque détail, et on met le plaisir au centre de tout.</p>
+          <p>Derrière cette fabrique, il y a moi, Fanny, 22 ans, une passionnée qui gère tout de A à Z: des recettes à la création du logo, de la production à la livraison, jusqu'à l'organisation et la comptabilité. Une seule chose me guide au quotidien : la passion de créer et l'envie de faire plaisir.</p>
+          <p>Quand je ne suis pas en train de faire fondre du chocolat ou de torréfier des noisettes, je suis probablement en train de courir, dans les montagnes… ou sur un tatami.  Souriante, organisée mais surtout animée par l’idée de faire plaisir, je crée des cookies généreux et gourmands en essayant d’être à la hauteur des goûters de mamie. Chaque cookie est fait maison, à la main, avec du cœur et du caractère.</p>
+        </div>
         <div class="founder-photo">
           <div class="founder-label">
-            <strong>[Prénom de la fondatrice]</strong>
-            <span>Fondatrice de Cookie Bliss</span>
+            <strong>FANNY</strong>
+            <span>Fondatrice de La Fabrique à Cookies</span>
           </div>
-        </div>
-        <div class="story-text">
-          <p>Cookie Bliss naît d’une obsession simple : trouver le cookie parfait. Celui qui ne déçoit pas, qui reste moelleux même une fois refroidi, avec suffisamment de chocolat pour qu’on ait envie d’y revenir… mais sans jamais être écœurant.</p>
-          <p>Après plusieurs années à tester des recettes dans sa cuisine, à faire goûter des fournées entières à sa famille, ses collègues et ses amis, [Prénom] décide de se lancer : transformer cette passion en une activité à taille humaine, centrée sur le goût et le plaisir de partager.</p>
-          <p>Aujourd’hui, Cookie Bliss reste un atelier artisanal. Chaque pâte est préparée à la main, chaque boule de cookie est pesée, façonnée et espacée avec soin sur la plaque. Le but n’est pas de produire le plus possible, mais plutôt de faire en sorte que chaque cookie mérite d’être savouré jusqu’à la dernière miette.</p>
         </div>
       </div>
 
@@ -396,42 +152,39 @@
             <div class="value-icon">🥰</div>
             <div>
               <h3 class="value-title">Gourmandise assumée</h3>
-              <p class="value-text">Des cookies généreux, loin des formats « mini ». Ici, on croque, on partage, et on savoure sans culpabiliser.</p>
+              <p class="value-text">Des cookies généreux, ultra gourmands, pensés pour provoquer un vrai coup de cœur dès la première bouchée.</p>
             </div>
           </article>
           <article class="value-card">
             <div class="value-icon">🧈</div>
             <div>
-              <h3 class="value-title">Qualité des ingrédients</h3>
-              <p class="value-text">Du vrai beurre, du bon chocolat, des produits choisis pour leur goût avant tout. La base d’une recette réussie.</p>
+              <h3 class="value-title">Artisanat sincère</h3>
+              <p class="value-text">Chaque commande est préparée à la main, avec soin, passion et toujours dans la bonne humeur.</p>
             </div>
           </article>
           <article class="value-card">
             <div class="value-icon">🤝</div>
             <div>
-              <h3 class="value-title">Proximité &amp; échange</h3>
-              <p class="value-text">Des commandes en direct, un contact humain et des recettes qui évoluent grâce aux retours de celles et ceux qui goûtent.</p>
+              <h3 class="value-title">Faire plaisir avant tout</h3>
+              <p class="value-text">Offrir bien plus qu'un cookie : un moment de plaisir, de réconfort et de partage.</p>
             </div>
-          </article>
-          <article class="value-card">
-            <div class="value-icon">🎉</div>
-            <div>
-              <h3 class="value-title">Moments à célébrer</h3>
-              <p class="value-text">Un cookie ne change pas le monde, mais il peut transformer un goûter, une pause au bureau ou une soirée entre amis.</p>
-            </div>
-          </article>
         </div>
       </section>
 
-      <section class="contact-block" id="contact">
-        <div>
-          <h2 class="contact-title">Où nous trouver &amp; nous contacter</h2>
-          <p class="contact-text">Cookie Bliss est basé à [Ville], avec une production artisanale à la commande. Certains week-ends, vous pouvez aussi retrouver nos cookies sur des marchés ou dans des coffee shops partenaires autour de [Zone géographique].</p>
-          <p class="contact-meta" style="margin-top:0.8rem;">Les informations pratiques (adresses précises, points de retrait, horaires) sont communiquées sur Instagram et lors de la confirmation de commande.</p>
-        </div>
-        <div class="contact-actions">
-          <button class="btn-primary" type="button" onclick="window.location.href='mailto:contact@cookiebliss.fr'">Nous écrire</button>
-          <button class="btn-outline" type="button" onclick="window.location.href='https://instagram.com/cookiebliss'">Voir sur Instagram</button>
+      <section class="section" id="contact">
+        <div class="contact-band">
+          <div>
+            <h2 class="contact-band-title">Où nous trouver &amp; nous contacter ?</h2>
+            <p class="contact-band-text">La Fabrique à Cookies est basée à Soumoulou, avec une production artisanale à la commande. Vous pouvez aussi retrouver les cookies dans des commerces partenaires autour de Tarbes et ses alentours.</p>
+            <p class="contact-meta" style="margin-top:0.8rem;">Les informations pratiques (adresses précises, points de retrait, horaires) sont communiquées sur Instagram et lors de la confirmation de commande.</p>
+          </div>
+          <div class="contact-band-actions">
+            <a class="btn-wa" href="https://wa.me/33782163179?text=Bonjour%2C%0AJe%20souhaite%20passer%20commande%20de%20cookies%2C%0AMerci%20par%20avance" target="_blank" rel="noreferrer">
+              <span>💬</span>
+              <span>Écrire sur WhatsApp</span>
+            </a>
+            <a class="btn-outline" href="sms:+33782163179">Écrire par SMS</a>
+          </div>
         </div>
       </section>
     </div>
@@ -442,34 +195,37 @@
   <div class="container footer-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-brand">Cookie Bliss</div>
-        <div>Cookies artisanaux, moelleux et généreux, faits maison avec amour.</div>
+        <div class="footer-brand">La Fabrique à Cookies</div>
+        <div>Le cookie plus balèze que mamie</div>
       </div>
       <div class="footer-links">
-        <a href="https://instagram.com/cookiebliss" target="_blank" rel="noreferrer">Instagram</a>
-        <a href="mailto:contact@cookiebliss.fr">Contact</a>
+        <a class="social-icon" href="https://www.instagram.com/la_fabrique_cookies/" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <img src="images/instagram-icon.png" alt="Instagram La Fabrique à Cookies">
+        </a>
+        <a class="social-icon" href="https://www.facebook.com/profile.php?id=61584103722448&mibextid=wwXIfr&rdid=BR2j6qSkLRZrTVAp&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AhaWV5Nfa%2F%3Fmibextid%3DwwXIfr" target="_blank" rel="noreferrer" aria-label="Facebook">
+          <img src="images/facebook-icon.png" alt="Facebook La Fabrique à Cookies">
+        </a>
         <a href="mentions-legales.html">Mentions légales</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year"></span> Cookie Bliss – Tous droits réservés.</span>
-      <span>Site vitrine – fabrication artisanale de cookies.</span>
+      <span>© <span id="year"></span> La Fabrique à Cookies – Tous droits réservés.</span>
     </div>
   </div>
 </footer>
 
 <script>
   (function(){
-    const header = document.querySelector('header');
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
-    if(burger && header && navLinks){
-      burger.addEventListener('click', ()=>{
+    const header=document.querySelector('header');
+    const burger=document.querySelector('.burger');
+    const navLinks=document.querySelector('.nav-links');
+    if(burger&&header&&navLinks){
+      burger.addEventListener('click',()=>{
         burger.classList.toggle('active');
         header.classList.toggle('nav-open');
       });
       navLinks.querySelectorAll('a').forEach(link=>{
-        link.addEventListener('click', ()=>{
+        link.addEventListener('click',()=>{
           burger.classList.remove('active');
           header.classList.remove('nav-open');
         });
@@ -477,20 +233,18 @@
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-      anchor.addEventListener('click', function(e){
-        const targetId = this.getAttribute('href').slice(1);
-        const target = document.getElementById(targetId);
+      anchor.addEventListener('click',function(e){
+        const targetId=this.getAttribute('href').slice(1);
+        const target=document.getElementById(targetId);
         if(target){
           e.preventDefault();
-          target.scrollIntoView({behavior:'smooth', block:'start'});
+          target.scrollIntoView({behavior:'smooth',block:'start'});
         }
       });
     });
 
-    const yearSpan = document.getElementById('year');
-    if(yearSpan){
-      yearSpan.textContent = new Date().getFullYear();
-    }
+    const yearSpan=document.getElementById('year');
+    if(yearSpan){yearSpan.textContent=new Date().getFullYear();}
   })();
 </script>
 </body>
