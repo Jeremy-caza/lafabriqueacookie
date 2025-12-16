@@ -51,7 +51,17 @@
     .founder-label{position:absolute;left:1.4rem;bottom:1.4rem;padding:0.7rem 1.1rem;border-radius:var(--radius-md);background:rgba(255,255,255,0.94);font-size:0.85rem;display:flex;flex-direction:column;gap:0.1rem}
     .founder-label strong{font-weight:600}
     .story-text p{font-size:0.95rem;margin-bottom:0.9rem;color:var(--color-text)}
+    .story-text{position:relative;padding:1.2rem 1.2rem;border-radius:var(--radius-lg)}
+.story-text::before{content:"";position:absolute;inset:0;border-radius:inherit;background:rgba(255,255,255,0.72);z-index:0}
+.story-text::after{content:"";position:absolute;inset:0;border-radius:inherit;background:url("images/logo-secondaire.png") center/380px no-repeat;opacity:0.10;z-index:1;pointer-events:none}
+.story-text > *{position:relative;z-index:2}
 
+@media (max-width:767px){
+  .story-text{padding:1rem 1rem}
+  .story-text::before{background:rgba(255,255,255,0.78)}
+  .story-text::after{background-size:260px;opacity:0.09}
+}
+    
     .values-section{margin-top:3rem}
     .values-grid{display:grid;gap:1.4rem;margin-top:1.4rem}
     .value-card{background:var(--color-secondary);border-radius:var(--radius-md);padding:1.3rem 1.4rem;display:flex;gap:1rem;align-items:flex-start}
