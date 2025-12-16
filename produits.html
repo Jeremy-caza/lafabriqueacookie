@@ -49,6 +49,9 @@
     .product-card{background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-soft);display:flex;flex-direction:column}
     .product-image{position:relative;padding-top:64%;background-color:#fbeade;background-size:cover;background-position:center}
     .product-tag{position:absolute;left:1rem;top:1rem;padding:0.35rem 0.8rem;border-radius:var(--radius-pill);background:rgba(255,255,255,0.96);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em}
+    .product-logo{position:absolute;right:1rem;bottom:1rem;width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,0.96);border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(0,0,0,0.08);z-index:2}
+    .product-logo img{width:18px;height:18px;object-fit:contain;display:block}
+@media (max-width:767px){.product-logo{right:0.85rem;bottom:0.85rem;width:32px;height:32px}.product-logo img{width:17px;height:17px}}
     .product-body{padding:1.2rem 1.4rem 1.4rem;display:flex;flex-direction:column;gap:0.5rem}
     .product-title{font-weight:600;font-size:1rem}
     .product-desc{font-size:0.9rem;color:var(--color-muted)}
@@ -132,6 +135,7 @@
         <article class="product-card">
           <div class="product-image" style="background-image:url('images/produit-signature.jpeg');">
             <span class="product-tag">Best-seller</span>
+            <span class="product-logo" aria-hidden="true"> <img src="images/logo-secondaire.png" alt=""> </span>
           </div>
           <div class="product-body">
             <h2 class="product-title">Le Cookie Signature</h2>
@@ -145,6 +149,7 @@
         <article class="product-card">
           <div class="product-image" style="background-image:url('images/produit-bipolaire.jpeg');">
             <span class="product-tag">Chocolat</span>
+             <span class="product-logo" aria-hidden="true"> <img src="images/logo-secondaire.png" alt=""> </span>
           </div>
           <div class="product-body">
             <h2 class="product-title">Le Cookie Bipolaire</h2>
@@ -158,6 +163,7 @@
         <article class="product-card">
           <div class="product-image" style="background-image:url('images/produit-torrid.jpeg');">
             <span class="product-tag">Cœur fondant</span>
+             <span class="product-logo" aria-hidden="true"> <img src="images/logo-secondaire.png" alt=""> </span>
           </div>
           <div class="product-body">
             <h2 class="product-title">Le Cookie Torrid</h2>
@@ -171,6 +177,7 @@
         <article class="product-card">
           <div class="product-image" style="background-image:url('images/produit-givre.jpeg');">
             <span class="product-tag">Moelleux</span>
+             <span class="product-logo" aria-hidden="true"> <img src="images/logo-secondaire.png" alt=""> </span>
           </div>
           <div class="product-body">
             <h2 class="product-title">Le Cookie Givré</h2>
@@ -184,6 +191,7 @@
         <article class="product-card">
           <div class="product-image" style="background-image:url('images/produit-crispy.jpeg');">
             <span class="product-tag">Croustillant</span>
+             <span class="product-logo" aria-hidden="true"> <img src="images/logo-secondaire.png" alt=""> </span>
           </div>
           <div class="product-body">
             <h2 class="product-title">Le Cookie Crispy</h2>
@@ -197,6 +205,7 @@
         <article class="product-card">
           <div class="product-image" style="background-image:url('images/produit-avenir.jpg');">
             <span class="product-tag">ÉDITION LIMITÉE</span>
+             <span class="product-logo" aria-hidden="true"> <img src="images/logo-secondaire.png" alt=""> </span>
           </div>
           <div class="product-body">
             <h2 class="product-title">La Fabrique x Dubaï</h2>
