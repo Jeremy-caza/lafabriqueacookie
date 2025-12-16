@@ -49,9 +49,9 @@
     .product-card{background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-soft);display:flex;flex-direction:column}
     .product-image{position:relative;padding-top:64%;background-color:#fbeade;background-size:cover;background-position:center}
     .product-tag{position:absolute;left:1rem;top:1rem;padding:0.35rem 0.8rem;border-radius:var(--radius-pill);background:rgba(255,255,255,0.96);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em}
-    .product-logo{position:absolute;right:1rem;bottom:1rem;width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,0.96);border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(0,0,0,0.08);z-index:2}
-    .product-logo img{width:18px;height:18px;object-fit:contain;display:block}
-@media (max-width:767px){.product-logo{right:0.85rem;bottom:0.85rem;width:32px;height:32px}.product-logo img{width:17px;height:17px}}
+   .product-logo{position:absolute;right:1rem;bottom:1rem;z-index:2;pointer-events:none}
+.product-logo img{height:34px;width:auto;display:block;opacity:.95;filter:drop-shadow(0 10px 22px rgba(0,0,0,.18))}
+@media (max-width:767px){.product-logo{right:0.85rem;bottom:0.85rem}.product-logo img{height:26px}}
     .product-body{padding:1.2rem 1.4rem 1.4rem;display:flex;flex-direction:column;gap:0.5rem}
     .product-title{font-weight:600;font-size:1rem}
     .product-desc{font-size:0.9rem;color:var(--color-muted)}
